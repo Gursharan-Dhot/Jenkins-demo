@@ -1,7 +1,6 @@
 pipeline {
-    agent {
-        docker { image 'node:18' }
-    }
+    agent any
+   // {        docker { image 'node:18' }     }
     stages {
         stage('Clone') {
             steps {
