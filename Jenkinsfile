@@ -1,12 +1,10 @@
 pipeline {
-    agent any
-   // {        docker { image 'node:18' }     }
+    agent {
+        docker {
+            image 'node:18'  // or 'node:20' — pick appropriate version
+        }
+    }
     stages {
-       // stage('Clone') {
-           // steps {
-             //   git 'https://github.com/YOUR_USERNAME/jenkins-demo.git'
-           // }
-      //  }
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
@@ -19,7 +17,7 @@ pipeline {
         }
         stage('Run App') {
             steps {
-                sh 'node index.js'
+                sh 'npm start'
             }
         }
     }
