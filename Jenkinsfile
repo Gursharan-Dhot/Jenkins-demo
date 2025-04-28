@@ -2,11 +2,11 @@ pipeline {
     agent any
    // {        docker { image 'node:18' }     }
     stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/YOUR_USERNAME/jenkins-demo.git'
-            }
-        }
+       // stage('Clone') {
+           // steps {
+             //   git 'https://github.com/YOUR_USERNAME/jenkins-demo.git'
+           // }
+      //  }
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
