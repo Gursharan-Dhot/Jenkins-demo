@@ -2,20 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Install Dependencies') {
+        stage('Build') {
             steps {
-                sh 'npm install'
+                echo "✅ Just a simple build stage running."
+                sh 'cat hello.txt'
             }
         }
-        stage('Run Test') {
+
+        stage('Done') {
             steps {
-                sh 'npm test'
+                echo "🎉 Build complete. You can add more here later."
             }
-        }
-        stage('Run App') {
-            steps {
-                sh 'npm start'
-            }
-        }
-    }
+        }
+    }
 }
