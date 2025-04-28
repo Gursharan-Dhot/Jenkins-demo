@@ -13,6 +13,6 @@ pipeline {
             steps {
                 echo " Build complete. You can add more here later."
             }
-        }
+        }
     }
 }
